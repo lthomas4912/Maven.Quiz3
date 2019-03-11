@@ -6,7 +6,15 @@ package rocks.zipcode.io.quiz3.objectorientation.enums;
 public enum RockPaperScissorHandSign {
     ADD_ENUMERATIONS_HERE;
 
+    enum Plays {
+        PAPER,
+        ROCK(), SISSCORS,
+        ;
+    }
+
     public RockPaperScissorHandSign getWinner() {
+        String handsign = "";
+
         return null;
     }
 

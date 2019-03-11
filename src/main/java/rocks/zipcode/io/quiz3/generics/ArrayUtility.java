@@ -6,6 +6,7 @@ import java.util.function.Function;
  * @author leon on 09/12/2018.
  */
 public class ArrayUtility<SomeType> {
+
     private final SomeType[] array;
 
     public ArrayUtility(SomeType[] array) {
@@ -13,6 +14,10 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType findOddOccurringValue() {
+        for(int i = 0; i < array.length; i++){
+
+        }
+
         return null;
     }
 
