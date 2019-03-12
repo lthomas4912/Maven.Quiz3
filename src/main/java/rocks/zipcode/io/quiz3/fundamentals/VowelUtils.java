@@ -8,9 +8,12 @@ public class VowelUtils {
 
 
     public static Boolean hasVowels(String word) {
-
-
-        return null;
+    for (int i = 0; i < word.length(); i++) {
+        if (isVowels(word.charAt(i))) {
+            return true;
+            }
+        }
+        return false;
     }
 
     public static Integer getIndexOfFirstVowel(String word) {
@@ -30,12 +33,7 @@ public class VowelUtils {
 
 
     public static Boolean startsWithVowel(String word) {
-        for (int i = 0; i < vowels.length; i++) {
-            char b = vowels[i];
-            if(word.indexOf(0) == b)
-            return true;
-         }
-        return false;
+        return isVowels(word.charAt(0));
         }
 
 

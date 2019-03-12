@@ -7,7 +7,8 @@ public class Lab {
     String labName;
 
     public Lab() {
-        labName = "";
+
+        this("");
     }
 
     public Lab(String labName) {
@@ -18,7 +19,6 @@ public class Lab {
         return labName;
     }
 
-    public void setLabName(String labName) {
-        this.labName = labName;
+
     }
-}
+
