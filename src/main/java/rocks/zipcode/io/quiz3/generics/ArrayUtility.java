@@ -14,22 +14,43 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType findOddOccurringValue() {
-        for(int i = 0; i < array.length; i++){
+        int count = 0;
 
+        for(SomeType element : array){
+            if((getNumberOfOccurrences(element))%2 == 1){
+                array[count] = element;
+                count++;
+            }
+         }
+            return null;
+    }
+
+    public SomeType findEvenOccurringValue() {
+        int count = 0;
+        SomeType [] otherArray = array.clone();
+        for(SomeType element : otherArray){
+            if((getNumberOfOccurrences(element))%2 == 0){
+                otherArray[count] = element;
+                count++;
+            }
         }
 
         return null;
     }
 
-    public SomeType findEvenOccurringValue() {
-        return null;
-    }
-
     public Integer getNumberOfOccurrences(SomeType valueToEvaluate) {
-        return null;
+        int count = 0;
+        for(SomeType element : array){
+            if(element == valueToEvaluate){
+                count++;
+            }
+        }
+        return count;
     }
 
     public SomeType[] filter(Function<SomeType, Boolean> predicate) {
         return null;
     }
+
+
 }
