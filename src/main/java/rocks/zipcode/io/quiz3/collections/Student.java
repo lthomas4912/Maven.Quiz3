@@ -2,10 +2,7 @@ package rocks.zipcode.io.quiz3.collections;
 
 import rocks.zipcode.io.quiz3.objectorientation.enums.LabStatus;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author leon on 10/12/2018.
@@ -15,7 +12,7 @@ public class Student {
 
 
     public Student() {
-        this(new HashMap<>());
+        this.map =(new TreeMap<>());
     }
 
     public Student(Map<Lab, LabStatus> map) {
@@ -32,6 +29,11 @@ public class Student {
     }
 
     public void setLabStatus(String labName, LabStatus labStatus) {
+        Lab lab = getLab(labName);
+        if(lab == null){
+            throw new UnsupportedOperationException();
+        }
+        map.put(lab,labStatus);
 
     }
 
@@ -41,7 +43,22 @@ public class Student {
     }
 
     public LabStatus getLabStatus(String labName) {
+        Lab lab = getLab(labName);
+        return map.get(lab);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        for(Map.Entry<Lab, LabStatus> entry : map.entrySet()){
+            builder.append(entry.getKey(). getName());
+            builder.append(" > ");
+            builder.append(entry.getValue().toString());
+            builder.append("\n");
+        }
         return null;
     }
+
+
 }
 

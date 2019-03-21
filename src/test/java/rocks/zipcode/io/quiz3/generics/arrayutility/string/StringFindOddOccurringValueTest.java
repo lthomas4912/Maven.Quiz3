@@ -16,7 +16,7 @@ public class StringFindOddOccurringValueTest {
         ArrayUtility<String> utility = new ArrayUtility<>(array);
 
         // when
-        String[] actual = utility.findOddOccurringValue();
+        String actual = utility.findOddOccurringValue();
         Assert.assertEquals(expected, actual);
     }
 
